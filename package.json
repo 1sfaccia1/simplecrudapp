@@ -1,0 +1,15 @@
+{
+  "name": "zApp",
+  "version": "1.0.0",
+  "description": "test mern stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "1stfaccia1 <chad.m.wittman75@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pug": "^2.0.3"
+  }
+}
