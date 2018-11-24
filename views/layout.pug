@@ -2,9 +2,15 @@ doctype html
 html
   head
     title zApp
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap-grid.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/style.css')
   body
-    block content
-    br
-    hr
-    footer
-      p Copyright &copy; 2018
+    .container  
+      block content
+      br
+      hr
+      footer
+        p Copyright &copy; 2018
+  script(src='/bower_components/jquery/dist/jquery.js')  
+  script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+  script(src='/js/main.js')

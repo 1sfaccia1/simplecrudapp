@@ -9,6 +9,7 @@
   "author": "1stfaccia1 <chad.m.wittman75@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.3.13",
     "pug": "^2.0.3"
