@@ -2,15 +2,38 @@ doctype html
 html
   head
     title zApp
-    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap-grid.min.css')
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet' type='text/css' href='/css/style.css')
   body
-    .container  
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+      .container  
+        a#logo.navbar-brand(href='#') zApp
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse.justify-content-end
+          ul.navbar-nav.justify-content-end
+            li.nav-item.active.justify-content-end
+              a.nav-link(href='/') Home 
+              span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='/articles/add') Add Article
+            li.nav-item.dropdown
+              a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Dropdown
+              .dropdown-menu(aria-labelledby='navbarDropdown')
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                .dropdown-divider
+                a.dropdown-item(href='#') Another action
+    .container
+      != messages('message', locals) 
+      if errors
+        each error, i in errors
+          div(class="alert alert-danger") #{error.msg}
       block content
       br
-      hr
-      footer
-        p Copyright &copy; 2018
+      footer.navbar.fixed-bottom.navbar-dark.bg-dark
+        .container.justify-content-center
+          a.navbar-brand.font-weigth-bold.font-italic(href='#logo') FACCIA.DESIGNS
   script(src='/bower_components/jquery/dist/jquery.js')  
   script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
   script(src='/js/main.js')

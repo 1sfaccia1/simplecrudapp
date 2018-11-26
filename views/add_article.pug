@@ -2,7 +2,8 @@ extends layout
 
 block content
     h1 #{title}
-    form(method='POST', action='/article/add')
+    hr
+    form(method='POST', action='/articles/add')
       #form-group
         label Title:
         input.form-control(name='title', type='text')
@@ -12,5 +13,6 @@ block content
       #form-group
         label Body:
         textarea.form-control(name='body')
-      input.btn.btn-primary(type='submit', value='submit')
+      br    
+      input.btn.btn-primary.justify-content-end(type='submit', value='submit')
       

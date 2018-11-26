@@ -5,14 +5,14 @@ let articleSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  auther:{
+  author:{
     type: String,
     required: true
   },
   body:{
     type:String,
     required:true
-  },
+  }
 });
 
-let Articel = module.exports = mongoose.model('Article', articleSchema);
+let Article = module.exports = mongoose.model('Article', articleSchema);
