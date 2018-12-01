@@ -23,6 +23,8 @@ db.on('error', function(){
 const app = express();
 
 let Article = require('./models/article');
+let Linkup = require('./models/linkup');
+
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -91,10 +93,25 @@ app.get('/', function (req, res) {
   });
 });
 
+app.get('/', function (req, res) {
+  Linkup.find({}, function(err, linkups){
+    if(err){
+      console.log(err);
+    } else {
+      res.render('index', {
+        title: 'Linkups',
+        linkups: linkups
+      });
+    }
+  });
+});
+
 // Route files
 let articles = require('./routes/articles');
+let linkups = require('./routes/linkups');
 let users = require('./routes/users');
 app.use('/articles', articles);
+app.use('/linkups', linkups);
 app.use('/users', users);
 
 

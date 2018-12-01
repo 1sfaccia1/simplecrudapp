@@ -15,23 +15,21 @@ html
             li.nav-item.active.justify-content-end
               a.nav-link(href='/') Home 
               span.sr-only (current)
-            li.nav-item
-              a.nav-link(href='/articles/add') Add Article
             if user
               li.nav-item
                 a.nav-link(href='/users/logout') Logout
+              li.nav-item.dropdown
+                a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Dropdown
+                .dropdown-menu(aria-labelledby='navbarDropdown')
+                  a.dropdown-item(href='/articles/add') Add Article
+                  a.dropdown-item(href='/linkups/add') Add Linkup
+                  .dropdown-divider
+                  a.dropdown-item(href='/linkup') Another action
             else
               li.nav-item
                 a.nav-link(href='/users/register') Register
               li.nav-item
                 a.nav-link(href='/users/login') Login
-            li.nav-item.dropdown
-              a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Dropdown
-              .dropdown-menu(aria-labelledby='navbarDropdown')
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                .dropdown-divider
-                a.dropdown-item(href='#') Another action
           
     .container
       != messages('message', locals) 

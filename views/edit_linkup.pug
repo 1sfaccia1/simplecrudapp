@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1 #{title}
+    hr
+    form(method='POST', action='/articles/edit/'+linkup._id)
+      .form-group
+        label Title:
+        input.form-control(name='title', type='text' value=linkup.title)
+      .form-group 
+        label Author:
+        input.form-control(name='author', type='text' value=linkup.author)
+      .form-group
+        label Body:
+        textarea.form-control(name='body')= linkup.body
+      br
+      input.btn.btn-primary.justify-content-end(type='submit', value='submit')

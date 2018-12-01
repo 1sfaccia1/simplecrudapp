@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1 #{title}
+    hr
+    form(method='POST', action='/linkups/add')
+      #form-group
+        label Title:
+        input.form-control(name='title', type='text')
+      #form-group
+        label Body:
+        textarea.form-control(name='body')
+      br    
+      input.btn.btn-primary.justify-content-end(type='submit', value='submit')
+      

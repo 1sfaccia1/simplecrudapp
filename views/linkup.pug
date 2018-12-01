@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= linkup.title
+  h5 Written by: #{author}
+  hr
+  p= linkup.body
+  hr
+  if user
+    if user.id ==linkup.author
+      a.btn.btn-default(href='/linkups/edit/'+linkup._id) Edit 
+      a.btn.btn-danger.delete-linkup(href='#',data-id=linkup._id) Delete
