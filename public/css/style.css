@@ -1,5 +1,17 @@
 body{
-  background-image: linear-gradient(to bottom, #b3dced 0%,#29b8e5 50%,#bce0ee 100%);
-  height: 100vh;
-  background-repeat: no-repeat;
+background-color: #5d66dd;
+}
+
+.alert-error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  margin-top: 20px;
+}
+
+.alert-success_msg {
+  color: #3c763d;
+  background-color: #000;
+  border-color: #d6e9c6;
+  margin-top: 20px;
 }
