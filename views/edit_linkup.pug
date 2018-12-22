@@ -8,8 +8,7 @@ block content
         label Title:
         input.form-control(name='title', type='text' value=linkup.title)
       .form-group 
-        label Author:
-        input.form-control(name='author', type='text' value=linkup.author)
+        input.form-control(name='author', type='hidden' value=linkup.author)
       .form-group
         label Body:
         textarea.form-control(name='body')= linkup.body

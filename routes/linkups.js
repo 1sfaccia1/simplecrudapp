@@ -68,7 +68,7 @@ router.post('/edit/:id', function(req, res) {
 
   let query = {_id:req.params.id}
 
-  Linkup.update(query, linkup, function(err) {
+  Linkup.updateOne(query, linkup, function(err) {
     if (err) {
       console.log(err);
       return;

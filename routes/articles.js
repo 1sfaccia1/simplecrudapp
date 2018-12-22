@@ -68,7 +68,7 @@ router.post('/edit/:id', function(req, res) {
 
   let query = {_id:req.params.id}
 
-  Article.update(query, article, function(err) {
+  Article.updateOne(query, article, function(err) {
     if (err) {
       console.log(err);
       return;
@@ -100,7 +100,7 @@ router.delete('/:id', function(req, res){
     }
   });
 });
-  
+
 
 // Get Single Article
 router.get('/:id', function(req, res){
