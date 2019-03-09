@@ -13,7 +13,7 @@ router.get('/add', ensureAuthenticated, function(req, res) {
   });
 });
 
-router.post('/add', (req,res)=>{
+router.post('/add', (req,res) => {
   req.checkBody('title','Title is required').notEmpty();
   // req.checkBody('author','Author is required').notEmpty();
   req.checkBody('body','Body is required').notEmpty();

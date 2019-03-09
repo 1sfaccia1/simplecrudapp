@@ -112,6 +112,6 @@ app.use('/linkups', linkups);
 app.use('/users', users);
 
 
-app.listen(7000, function() {
-  console.log('Server started on port 7000');
-});
+const PORT = process.env.PORT || 5500;
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
